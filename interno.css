@@ -1,0 +1,22 @@
+*{
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: rgb(211, 234, 253);
+}
+
+h1 {
+    color: rgb(140, 40, 63);
+    text-align: center;
+    width: 100%;
+}
+
+#header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
