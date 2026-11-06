@@ -1,11 +1,18 @@
-*{
+* {
     padding: 0;
-    border: 0;
+    margin: 0;
     box-sizing: border-box;
 }
 
-body{
+body {
+    width: 100%;
+    min-height: 100vh;
     background-color: rgb(211, 234, 253);
+}
+
+img {
+    max-width: 100%;
+    height: auto;
 }
 
 h1 {
@@ -19,4 +26,103 @@ h1 {
     justify-content: space-between;
     align-items: center;
     padding: 10px 20px;
+}
+
+.lol,
+.val {
+    width: calc(100% - 40px);
+    margin: 30px 20px;
+    padding: 20px 15px 30px;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.lol {
+    background-color: rgba(72, 227, 219, 0.641);
+}
+
+.val {
+    background-color: rgba(243, 121, 121, 0.641);
+}
+
+.lol_personagem,
+.val_personagem {
+    display: grid;
+    grid-template-columns: repeat(3,  1fr);
+    width: 80%;
+    gap: 20px;
+}
+
+.lol_personagem div,
+.val_personagem div {
+    border: 2px black solid;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    position: relative;
+    padding: 25px 10px 15px;
+    min-height: 320px;
+}
+
+.lol_personagem h4,
+.val_personagem h4 {
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    margin: 0;
+}
+
+section img {
+    width: 60%;
+    height: 200px;
+    object-fit: cover;
+    margin: 35px auto 0;
+    display: block;
+}
+
+div p {
+    font-size: 14px;
+    text-align: center;
+    margin: 20px 10px 0;
+    line-height: 1.4;
+}
+
+@media (max-width: 768px) {
+    .lol_personagem,
+    .val_personagem {
+        grid-template-columns: 1fr;
+        width: 90%;
+    }
+
+    #header {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    section img {
+        width: 70%;
+        height: 180px;
+    }
+}
+
+@media (max-width: 480px) {
+    .lol,
+    .val {
+        width: (90%);
+        margin: 20px 10px;
+    }
+
+    .lol_personagem,
+    .val_personagem {
+        width: 95%;
+    }
+
+    section img {
+        width: 80%;
+        height: 160px;
+    }
 }
